@@ -2,12 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import AssetLoader from './components/AssetLoader';
+import TimerChip from './components/TimerChip';
 
 function App() {
   return (
     <div className="App">
-      <AssetLoader type="champion" value="Aatrox" />
+      <TimerChip duration={15} />
     </div>
   );
 }
