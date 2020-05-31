@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  margin: 1rem;
+  width: 24rem;
+}
+
+.card-media {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+}
+
+.card-details {
+  flex: 1;
+}
+
+.card-timers {
+  display: flex;
+  justify-content: space-evenly;
+}
