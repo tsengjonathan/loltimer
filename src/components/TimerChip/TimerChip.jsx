@@ -8,6 +8,12 @@ export default function TimerChip({ duration }) {
   const [isActivated, setActivated] = useState(false);
   const [timer, setTimer] = useState(duration);
 
+  // Reset timer if the duration prop changes
+  useEffect(() => {
+    setTimer(duration);
+    setActivated(false);
+  }, [duration])
+
   useEffect(() => {
     if (isActivated && timer > 0) {
       const interval = setInterval(() => setTimer(timer - 1), 1000);

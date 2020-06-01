@@ -1,34 +1,25 @@
-import _ from 'lodash';
-
-let dataDragonVersion = undefined;
-let champions = {};
-
-// TODO: Revert the pre-cache mechanism as it doesn't work.
-
-async function getDataDragonVersion() {
-  // Pre-cache the version number on initial load.
-  if (!dataDragonVersion) {
-    await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
-      .then(res => res.json())
-      .then(json => {
-      dataDragonVersion = json[0];
-    });
-  };
-  return dataDragonVersion;
+async function fetchAPIVersion() {
+  const versions = await fetch('https://ddragon.leagueoflegends.com/api/versions.json')
+    .then(res => res.json());
+  return versions[0];
 }
 
-async function getChampionInfo(id) {
-  if (_.isEmpty(champions)) {
-    await fetch('http://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/champion.json')
-      .then(res => res.json())
-      .then(json => {
-        champions = json.data
-      });
-  }
-  return champions[id];
+async function fetchChampion(id) {
+  const version = await fetchAPIVersion();
+  const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${id}.json`)
+    .then(res => res.json());
+  return response.data[id];
+}
+
+async function fetchAllChampions() {
+  const version = await fetchAPIVersion();
+  return await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
+    .then(res => res.json())
+    .then(json => json.data);
 }
 
 export {
-  getDataDragonVersion,
-  getChampionInfo
+  fetchAPIVersion,
+  fetchChampion,
+  fetchAllChampions
 }
