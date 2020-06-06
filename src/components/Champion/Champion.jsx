@@ -18,9 +18,9 @@ export default function Champion() {
   const [spellOne, setSpellOne] = useState("SummonerDot");
   const [spellTwo, setSpellTwo] = useState("SummonerFlash");
 
-  const championUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`;
-  const spellOneUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellOne}.png`;
-  const spellTwoUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellTwo}.png`;
+  const championUrl = `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`;
+  const spellOneUrl = `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellOne}.png`;
+  const spellTwoUrl = `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellTwo}.png`;
 
   useEffect(() => {
     fetchAPIVersion().then(res => setVersion(res));

@@ -6,21 +6,21 @@ async function fetchAPIVersion() {
 
 async function fetchChampion(id) {
   const version = await fetchAPIVersion();
-  const response = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${id}.json`)
+  const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion/${id}.json`)
     .then(res => res.json());
   return response.data[id];
 }
 
 async function fetchAllChampions() {
   const version = await fetchAPIVersion();
-  return await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
+  return await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
     .then(res => res.json())
     .then(json => json.data);
 }
 
 async function fetchSummonerSpells() {
   const version = await fetchAPIVersion();
-  return await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/summoner.json`)
+  return await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/summoner.json`)
     .then(res => res.json())
     .then(json => json.data);
 }
