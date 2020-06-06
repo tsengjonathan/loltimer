@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/loltimer/static/css/main.4342be63.chunk.css",
-    "main.js": "/loltimer/static/js/main.8dd52036.chunk.js",
-    "main.js.map": "/loltimer/static/js/main.8dd52036.chunk.js.map",
+    "main.js": "/loltimer/static/js/main.04423271.chunk.js",
+    "main.js.map": "/loltimer/static/js/main.04423271.chunk.js.map",
     "runtime-main.js": "/loltimer/static/js/runtime-main.c5c00ebc.js",
     "runtime-main.js.map": "/loltimer/static/js/runtime-main.c5c00ebc.js.map",
     "static/js/2.389c44da.chunk.js": "/loltimer/static/js/2.389c44da.chunk.js",
     "static/js/2.389c44da.chunk.js.map": "/loltimer/static/js/2.389c44da.chunk.js.map",
     "index.html": "/loltimer/index.html",
-    "precache-manifest.1ab0faf0ed8393f3822be2d4d4c3bab7.js": "/loltimer/precache-manifest.1ab0faf0ed8393f3822be2d4d4c3bab7.js",
+    "precache-manifest.484776a20195c1616826310bd145620e.js": "/loltimer/precache-manifest.484776a20195c1616826310bd145620e.js",
     "service-worker.js": "/loltimer/service-worker.js",
     "static/css/main.4342be63.chunk.css.map": "/loltimer/static/css/main.4342be63.chunk.css.map",
     "static/js/2.389c44da.chunk.js.LICENSE.txt": "/loltimer/static/js/2.389c44da.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c5c00ebc.js",
     "static/js/2.389c44da.chunk.js",
     "static/css/main.4342be63.chunk.css",
-    "static/js/main.8dd52036.chunk.js"
+    "static/js/main.04423271.chunk.js"
   ]
 }
