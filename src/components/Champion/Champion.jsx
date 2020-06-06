@@ -4,21 +4,27 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-import { fetchAPIVersion, fetchChampion } from '../../utils/constFetcher';
-import TimerChip from '../../components/TimerChip';
+import { fetchAPIVersion, fetchChampion, fetchSummonerSpells } from '../../utils/constFetcher';
+import { UltimateTimer, SummonerTimer } from '../../components/TimerChip';
 import ChampionSelect from '../../components/ChampionSelect';
 
 import './champion.css';
 
 export default function Champion() {
-  const [version, setVersion] = useState(undefined);
-  const [id, setId] = useState("Aatrox");
+  const [version, setVersion] = useState("");
+  const [id, setId] = useState("Taliyah");
   const [data, setData] = useState({});
+  const [spellData, setSpellData] = useState({});
+  const [spellOne, setSpellOne] = useState("SummonerDot");
+  const [spellTwo, setSpellTwo] = useState("SummonerFlash");
 
-  const imageUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`;
+  const championUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`;
+  const spellOneUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellOne}.png`;
+  const spellTwoUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellTwo}.png`;
 
   useEffect(() => {
     fetchAPIVersion().then(res => setVersion(res));
+    fetchSummonerSpells().then(res => setSpellData(res));
   }, []);
 
   useEffect(() => {
@@ -37,15 +43,15 @@ export default function Champion() {
 
   return (
     <Card className="card">
-      <CardMedia className="card-media" image={imageUrl} title={id} />
+      <CardMedia className="card-media" image={championUrl} title={id} />
       <div className="card-details">
         <CardContent>
           <ChampionSelect id={id} onChange={onChampionChange} />
         </CardContent>
         <div className="card-timers">
-          <TimerChip duration={ultTimer} />
-          <TimerChip duration={300} />
-          <TimerChip duration={300} />
+          <UltimateTimer duration={ultTimer} />
+          <SummonerTimer spell={spellOne} setSpell={setSpellOne} spellData={spellData} imgUrl={spellOneUrl} />
+          <SummonerTimer spell={spellTwo} setSpell={setSpellTwo} spellData={spellData} imgUrl={spellTwoUrl} />
         </div>
       </div>
     </Card>

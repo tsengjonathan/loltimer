@@ -18,8 +18,16 @@ async function fetchAllChampions() {
     .then(json => json.data);
 }
 
+async function fetchSummonerSpells() {
+  const version = await fetchAPIVersion();
+  return await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/summoner.json`)
+    .then(res => res.json())
+    .then(json => json.data);
+}
+
 export {
   fetchAPIVersion,
   fetchChampion,
-  fetchAllChampions
+  fetchAllChampions,
+  fetchSummonerSpells
 }

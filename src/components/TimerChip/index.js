@@ -1,3 +1,4 @@
-import TimerChip from './TimerChip';
+import UltimateTimer from './UltimateTimer';
+import SummonerTimer from './SummonerTimer';
 
-export default TimerChip;
+export { UltimateTimer, SummonerTimer };
