@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import _ from 'lodash';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
@@ -7,20 +7,16 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import CheckIcon from '@material-ui/icons/CheckCircle';
 import SummonerSelect from './SummonerSelect';
 
-import { fetchAPIVersion } from '../../utils/constFetcher';
+import { APIContext } from '../../contexts/APIContext';
 
 export default function SummonerTimer({ spell: spellId, setSpell, imgUrl, spellData }) {
+  const { version } = useContext(APIContext);
   const [isActivated, setActivated] = useState(false);
   const [timer, setTimer] = useState(-1);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [version, setVersion] = useState("");
 
   const spell = spellData[spellId];
-  const spellCooldown = _.get(spell, 'cooldown[0]', -1);
-
-  useEffect(() => {
-    fetchAPIVersion().then(res => setVersion(res));
-  }, []);
+  const spellCooldown = _.get(spell, 'cooldown[0]', 0);
 
   const resetTimer = useCallback(() => {
     setTimer(spellCooldown);
@@ -61,7 +57,7 @@ export default function SummonerTimer({ spell: spellId, setSpell, imgUrl, spellD
   }
 
   const icon = isActivated ? <CancelIcon /> : <CheckIcon />
-  const avatar = <Avatar src={imgUrl} alt={spell} />
+  const avatar = <Avatar src={imgUrl} alt={spellId} />
 
   return (
     <>

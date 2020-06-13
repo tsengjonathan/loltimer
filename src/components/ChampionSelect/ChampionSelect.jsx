@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import _ from 'lodash';
 
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import { fetchAllChampions } from '../../utils/constFetcher';
+import { APIContext } from '../../contexts/APIContext';
 
 export default function ChampionSelect({ id, onChange }) {
-  const [champions, setChampions] = useState([]);
+  const { champions } = useContext(APIContext);
 
-  useEffect(() => {
-    fetchAllChampions().then((res) => setChampions(_.values(res)));
-  }, []);
-
-  const championList = champions.map((champion) => <MenuItem key={champion.id} value={champion.id}>{champion.name}</MenuItem>);
+  const championList = _.values(champions).map((champion) => (
+    <MenuItem key={champion.id} value={champion.id}>{champion.name}</MenuItem>)
+  );
 
   return (
     <Select value={id} onChange={onChange}>

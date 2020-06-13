@@ -11,15 +11,15 @@ async function fetchChampion(id) {
   return response.data[id];
 }
 
-async function fetchAllChampions() {
-  const version = await fetchAPIVersion();
+async function fetchAllChampions(versionInput) {
+  const version = versionInput ? versionInput : await fetchAPIVersion();
   return await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`)
     .then(res => res.json())
     .then(json => json.data);
 }
 
-async function fetchSummonerSpells() {
-  const version = await fetchAPIVersion();
+async function fetchSummonerSpells(versionInput) {
+  const version = versionInput ? versionInput : await fetchAPIVersion();
   return await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/summoner.json`)
     .then(res => res.json())
     .then(json => json.data);
