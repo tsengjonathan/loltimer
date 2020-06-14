@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6da2dd548e4900fe1a197005022d3375",
+    "revision": "78bf0f376844b66d9ed3b826d15ac8a4",
     "url": "/loltimer/index.html"
   },
   {
