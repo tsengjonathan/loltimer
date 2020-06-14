@@ -9,18 +9,18 @@ function App() {
     <APIContextProvider>
       <div className="container">
         <div className="column">
-          <Champion id="Jax" />
-          <Champion id="LeeSin" />
-          <Champion id="Taliyah" />
-          <Champion id="Caitlyn" />
-          <Champion id="Thresh" />
+          <Champion />
+          <Champion />
+          <Champion />
+          <Champion />
+          <Champion />
         </div>
         <div className="column">
-          <Champion id="Malphite" />
-          <Champion id="Kayn" />
-          <Champion id="Orianna" />
-          <Champion id="Ezreal" />
-          <Champion id="Leona" />
+          <Champion />
+          <Champion />
+          <Champion />
+          <Champion />
+          <Champion />
         </div>
       </div>
     </APIContextProvider>
