@@ -34,19 +34,10 @@ code {
   padding: 0 1rem 1rem 1rem;
 }
 
-.cooldown-button {
-  width: 2rem;
-  height: 2rem;
-  float: right;
-  margin-left: .5rem;
-  border-radius: 1rem;
-  padding: 0;
-}
-
 .cooldown-image{
   border-radius: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: calc(2rem - 4px);
+  height: calc(2rem - 4px);
 }
 
 .summoner-icon {

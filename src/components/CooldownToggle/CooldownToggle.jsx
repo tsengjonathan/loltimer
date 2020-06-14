@@ -7,13 +7,12 @@ const useStyles = makeStyles({
   root: {
     width: '2rem',
     height: '2rem',
-    marginLeft: '.5rem',
+    marginLeft: '.5rem !important',
     borderRadius: '1rem',
     padding: 0
   },
   selected: {
-    border: '2px solid #38b4b2',
-    marginLeft: '.5rem !important'
+    border: '2px solid #38b4b2 !important',
   }
 });
 
