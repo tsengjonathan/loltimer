@@ -7,8 +7,15 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { APIContext } from '../../contexts/APIContext';
 import { UltimateTimer, SummonerTimer } from '../../components/TimerChip';
 import ChampionSelect from '../../components/ChampionSelect';
+import CooldownToggle from '../../components/CooldownToggle';
+
+import ionianBootsImg from '../../assets/IonianBoots.png';
+import cosmicInsightImg from '../../assets/CosmicInsight.png';
 
 import './champion.css';
+
+const ionianBoots = { img: ionianBootsImg, cooldown: 0.1, id: 'IonianBoots' }
+const cosmicInsight = { img: cosmicInsightImg, cooldown: 0.05, id: 'CosmicInsight' }
 
 export default function Champion() {
   const { version, champions, addChampion, cachedChampions, summonerSpells } = useContext(APIContext);
@@ -16,6 +23,10 @@ export default function Champion() {
   const [data, setData] = useState({});
   const [spellOne, setSpellOne] = useState("SummonerDot");
   const [spellTwo, setSpellTwo] = useState("SummonerFlash");
+  const [bootsClicked, setBootsClicked] = useState(false);
+  const [cosmicClicked, setCosmicClicked] = useState(false);
+  const [spellOneCooldown, setSpellOneCooldown] = useState(0);
+  const [spellTwoCooldown, setSpellTwoCooldown] = useState(0);
 
   const championUrl = _.isEmpty(id)
     ? 'http://ddragon.leagueoflegends.com/cdn/10.12.1/img/profileicon/588.png'
@@ -37,6 +48,22 @@ export default function Champion() {
     }
   }, [id, champions, cachedChampions, addChampion]);
 
+  useEffect(() => {
+    const calculateCooldown = (spellId) => {
+      let cooldown = _.get(summonerSpells[spellId], 'cooldown[0]', 0);
+      let reduction = 1;
+      if (bootsClicked) {
+        reduction -= ionianBoots.cooldown;
+      }
+      if (cosmicClicked) {
+        reduction -= cosmicInsight.cooldown;
+      }
+      return cooldown * reduction;
+    }
+    setSpellOneCooldown(calculateCooldown(spellOne));
+    setSpellTwoCooldown(calculateCooldown(spellTwo));
+  }, [bootsClicked, cosmicClicked, spellOne, spellTwo, summonerSpells]);
+
   const onChampionChange = (event) => {
     setId(event.target.value);
   }
@@ -51,13 +78,17 @@ export default function Champion() {
     <Card className="card">
       <CardMedia className="card-media" image={championUrl} title={id} />
       <div className="card-details">
-        <CardContent>
-          <ChampionSelect id={id} onChange={onChampionChange} />
-        </CardContent>
+        <div className="card-top">
+          <CardContent>
+            <ChampionSelect id={id} onChange={onChampionChange} />
+            <CooldownToggle {...ionianBoots} selected={bootsClicked} setSelected={setBootsClicked} />
+            <CooldownToggle {...cosmicInsight} selected={cosmicClicked} setSelected={setCosmicClicked} />
+          </CardContent>
+        </div>
         <div className="card-timers">
           <UltimateTimer duration={ultTimer} />
-          <SummonerTimer spell={spellOne} setSpell={setSpellOne} spellData={summonerSpells} imgUrl={spellOneUrl} />
-          <SummonerTimer spell={spellTwo} setSpell={setSpellTwo} spellData={summonerSpells} imgUrl={spellTwoUrl} />
+          <SummonerTimer spell={spellOne} setSpell={setSpellOne} spellData={summonerSpells} imgUrl={spellOneUrl} cooldown={spellOneCooldown} />
+          <SummonerTimer spell={spellTwo} setSpell={setSpellTwo} spellData={summonerSpells} imgUrl={spellTwoUrl} cooldown={spellTwoCooldown} />
         </div>
       </div>
     </Card>

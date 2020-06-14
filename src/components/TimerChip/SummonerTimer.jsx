@@ -9,14 +9,11 @@ import SummonerSelect from './SummonerSelect';
 
 import { APIContext } from '../../contexts/APIContext';
 
-export default function SummonerTimer({ spell: spellId, setSpell, imgUrl, spellData }) {
+export default function SummonerTimer({ spell: spellId, setSpell, imgUrl, spellData, cooldown: spellCooldown }) {
   const { version } = useContext(APIContext);
   const [isActivated, setActivated] = useState(false);
   const [timer, setTimer] = useState(-1);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const spell = spellData[spellId];
-  const spellCooldown = _.get(spell, 'cooldown[0]', 0);
 
   const resetTimer = useCallback(() => {
     setTimer(spellCooldown);

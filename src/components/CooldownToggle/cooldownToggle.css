@@ -1,0 +1,19 @@
+button.cooldown-button {
+  width: 2rem;
+  float: right;
+  margin-left: .5rem;
+  border-radius: 1rem;
+  padding: 0;
+}
+
+button > span > img {
+  border-radius: 1rem;
+}
+
+.MuiCardContent-root:last-child {
+  padding-bottom : 1rem !important;
+}
+
+.MuiToggleButton-root.Mui-selected {
+  border: 2px solid #38b4b2 !important;
+}
