@@ -1,5 +1,6 @@
 button.cooldown-button {
   width: 2rem;
+  height: 2rem;
   float: right;
   margin-left: .5rem;
   border-radius: 1rem;
@@ -8,6 +9,8 @@ button.cooldown-button {
 
 button > span > img {
   border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .MuiCardContent-root:last-child {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback, useContext } from 'react';
-import _ from 'lodash';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 
