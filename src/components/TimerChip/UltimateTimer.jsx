@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 
-import CancelIcon from '@material-ui/icons/Cancel';
-import CheckIcon from '@material-ui/icons/CheckCircle';
-
 export default function UltimateTimer({ duration }) {
   const [isActivated, setActivated] = useState(false);
   const [timer, setTimer] = useState(duration);
@@ -34,10 +31,9 @@ export default function UltimateTimer({ duration }) {
     setActivated(!isActivated);
   }
 
-  const icon = isActivated ? <CancelIcon /> : <CheckIcon />
   const avatar = <Avatar>U</Avatar>
 
   return (
-    <Chip avatar={avatar} onDelete={handleClick} label={timer} deleteIcon={icon} />
+    <Chip avatar={avatar} onClick={handleClick} label={timer} />
   );
 }
