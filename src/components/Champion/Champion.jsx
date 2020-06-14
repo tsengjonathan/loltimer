@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import _ from 'lodash';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -12,12 +13,20 @@ import CooldownToggle from '../../components/CooldownToggle';
 import ionianBootsImg from '../../assets/IonianBoots.png';
 import cosmicInsightImg from '../../assets/CosmicInsight.png';
 
-import './champion.css';
-
 const ionianBoots = { img: ionianBootsImg, cooldown: 0.1, id: 'IonianBoots' }
 const cosmicInsight = { img: cosmicInsightImg, cooldown: 0.05, id: 'CosmicInsight' }
 
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    "&:last-child": {
+      paddingBottom: '1rem'
+    }
+  }
+});
+
 export default function Champion() {
+  const classes = useStyles();
   const { version, champions, addChampion, cachedChampions, summonerSpells } = useContext(APIContext);
   const [id, setId] = useState('');
   const [data, setData] = useState({});
@@ -79,7 +88,7 @@ export default function Champion() {
       <CardMedia className="card-media" image={championUrl} title={id} />
       <div className="card-details">
         <div className="card-top">
-          <CardContent>
+          <CardContent classes={{ root: classes.root }}>
             <ChampionSelect id={id} onChange={onChampionChange} />
             <CooldownToggle {...ionianBoots} selected={bootsClicked} setSelected={setBootsClicked} />
             <CooldownToggle {...cosmicInsight} selected={cosmicClicked} setSelected={setCosmicClicked} />
