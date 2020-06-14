@@ -2,8 +2,7 @@ import React, { useState, useEffect, useCallback, useContext } from 'react';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 
-import CancelIcon from '@material-ui/icons/Cancel';
-import CheckIcon from '@material-ui/icons/CheckCircle';
+import EditIcon from '@material-ui/icons/Edit';
 import SummonerSelect from './SummonerSelect';
 
 import { APIContext } from '../../contexts/APIContext';
@@ -52,15 +51,15 @@ export default function SummonerTimer({ spell: spellId, setSpell, imgUrl, spellD
     setIsDialogOpen(false);
   }
 
-  const icon = isActivated ? <CancelIcon /> : <CheckIcon />
+  const icon = <EditIcon />
   const avatar = <Avatar src={imgUrl} alt={spellId} />
 
   return (
     <>
       <Chip
         avatar={avatar}
-        onClick={openDialog}
-        onDelete={handleClick}
+        onClick={handleClick}
+        onDelete={openDialog}
         label={timer}
         deleteIcon={icon}
       />
