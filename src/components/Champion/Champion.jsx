@@ -95,7 +95,6 @@ export default function Champion() {
           </CardContent>
         </div>
         <div className="card-timers">
-          <UltimateTimer duration={ultTimer} />
           <SummonerTimer spell={spellOne} setSpell={setSpellOne} spellData={summonerSpells} imgUrl={spellOneUrl} cooldown={spellOneCooldown} />
           <SummonerTimer spell={spellTwo} setSpell={setSpellTwo} spellData={summonerSpells} imgUrl={spellTwoUrl} cooldown={spellTwoCooldown} />
         </div>
