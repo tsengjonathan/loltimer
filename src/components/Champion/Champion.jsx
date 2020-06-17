@@ -38,7 +38,7 @@ export default function Champion() {
   const [spellTwoCooldown, setSpellTwoCooldown] = useState(0);
 
   const championUrl = _.isEmpty(id)
-    ? 'http://ddragon.leagueoflegends.com/cdn/10.12.1/img/profileicon/588.png'
+    ? `https://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/588.png`
     : `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${id}.png`;
   const spellOneUrl = `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellOne}.png`;
   const spellTwoUrl = `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell/${spellTwo}.png`;
