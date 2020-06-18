@@ -6,7 +6,7 @@ import {
   fetchAllChampions,
   fetchChampion,
   fetchSummonerSpells
-} from '../utils/constFetcher';
+} from '../api/assets';
 
 const APIContext = createContext();
 
