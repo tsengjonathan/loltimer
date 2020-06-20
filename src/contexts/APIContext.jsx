@@ -8,6 +8,11 @@ import {
   fetchSummonerSpells
 } from '../api/assets';
 
+import {
+  fetchSummonerInfo,
+  fetchLiveGame
+} from '../api/game';
+
 const APIContext = createContext();
 
 function APIContextProvider({ children }) {
@@ -15,6 +20,8 @@ function APIContextProvider({ children }) {
   const [champions, setChampions] = useState({});
   const [summonerSpells, setSummonerSpells] = useState({});
   const [cachedChampions, setCachedChampions] = useState([]);
+  const [summonerInfo, setSummonerInfo] = useState({});
+  const [gameData, setGameData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,6 +29,10 @@ function APIContextProvider({ children }) {
         setVersion(res);
         fetchAllChampions(res).then(data => setChampions(data));
         fetchSummonerSpells(res).then(data => setSummonerSpells(data));
+      });
+      fetchSummonerInfo('lllducklll').then(res => {
+        setSummonerInfo(res);
+        fetchLiveGame(res.id).then(data => setGameData(data));
       });
     }
     fetchData();

@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import { APIContext } from '../../contexts/APIContext';
-import { UltimateTimer, SummonerTimer } from '../../components/TimerChip';
+import { SummonerTimer } from '../../components/TimerChip';
 import ChampionSelect from '../../components/ChampionSelect';
 import CooldownToggle from '../../components/CooldownToggle';
 
@@ -77,7 +77,7 @@ export default function Champion() {
     setId(event.target.value);
   }
 
-  const ultTimer = _.get(data, 'spells[3].cooldown[0]', 0);
+  // const ultTimer = _.get(data, 'spells[3].cooldown[0]', 0);
 
   if (!version) {
     return null;
