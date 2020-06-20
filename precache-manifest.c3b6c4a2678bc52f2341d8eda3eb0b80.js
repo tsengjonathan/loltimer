@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "236557fe4f3735be269fdc19a24d1cd8",
+    "revision": "d45159538395756fdcda79499f25f9ea",
     "url": "/loltimer/index.html"
   },
   {
-    "revision": "988086f1dd445516f889",
+    "revision": "5499079957043b748304",
     "url": "/loltimer/static/css/main.8a8ea433.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/loltimer/static/js/2.8875b6a2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "988086f1dd445516f889",
-    "url": "/loltimer/static/js/main.655364ad.chunk.js"
+    "revision": "5499079957043b748304",
+    "url": "/loltimer/static/js/main.71d5e1c9.chunk.js"
   },
   {
     "revision": "afa8c9deff93033c3122",
