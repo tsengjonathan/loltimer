@@ -1,28 +1,26 @@
 import React from 'react';
-import './App.css';
 
 import Champion from './components/Champion';
+import SummonerDetail from './components/SummonerDetail';
 import { APIContextProvider } from './contexts/APIContext';
 
 function App() {
   return (
     <APIContextProvider>
-      <div className="container">
-        <div className="column">
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-        </div>
-        <div className="column">
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-        </div>
-      </div>
+      <main>
+        <div className="columns is-vcentered">
+          <div className="column">
+            <SummonerDetail />
+            <Champion index={0} />
+            <Champion index={1} />
+          </div>
+          <div className="column">
+            <Champion index={2} />
+            <Champion index={3} />
+            <Champion index={4} />
+          </div>
+          </div>
+        </main>
     </APIContextProvider>
   );
 }
