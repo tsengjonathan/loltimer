@@ -1,0 +1,338 @@
+{
+  "summoner": {
+    "id": "zHK6JHkAMoNgzcofkVQCG4kw8U3Dah2C2985WYHh5hKV9Yek",
+    "accountId": "2Px2t4f7kKpdqRTEhdYYuMqyGu3c-j3VnX2mBwqUItG7W4YKCkfdNJ9k",
+    "puuid": "aVnzke3E080D1Ld72CTqglar2WZKvzFQ5_TvVT2906-KzBCeJLEz9gqb3mrWzEvF0LvPFVPu__QMgw",
+    "name": "Lady Spark",
+    "profileIconId": 4573,
+    "revisionDate": 1592766862000,
+    "summonerLevel": 34
+  },
+  "live": {
+    "gameId": 3469290637,
+    "mapId": 11,
+    "gameMode": "CLASSIC",
+    "gameType": "MATCHED_GAME",
+    "gameQueueConfigId": 420,
+    "participants": [
+        {
+            "teamId": 100,
+            "spell1Id": 7,
+            "spell2Id": 4,
+            "championId": 29,
+            "profileIconId": 4418,
+            "summonerName": "Tumblr Female",
+            "bot": false,
+            "summonerId": "NpQGHPbFySXbm5uz68-n43EgoP61d_dERKRPGnSn1weuzTU",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8008,
+                    9101,
+                    9103,
+                    8014,
+                    8275,
+                    8236,
+                    5005,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8000,
+                "perkSubStyle": 8200
+            }
+        },
+        {
+            "teamId": 100,
+            "spell1Id": 4,
+            "spell2Id": 12,
+            "championId": 1,
+            "profileIconId": 4404,
+            "summonerName": "Bartlebys Ass",
+            "bot": false,
+            "summonerId": "T0HewPZ0_7yIQ3hYV1ug9H7L9W_daCTDcoGGn6cQ__3dZfk",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8112,
+                    8126,
+                    8138,
+                    8105,
+                    8237,
+                    8234,
+                    5008,
+                    5008,
+                    5003
+                ],
+                "perkStyle": 8100,
+                "perkSubStyle": 8200
+            }
+        },
+        {
+            "teamId": 100,
+            "spell1Id": 11,
+            "spell2Id": 4,
+            "championId": 245,
+            "profileIconId": 23,
+            "summonerName": "ciri of cintra",
+            "bot": false,
+            "summonerId": "tDNvt6aklNE5JWq1rkEic_e_oshb1K2T0D1X5gbLYTynqUSQ",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8128,
+                    8126,
+                    8138,
+                    8135,
+                    9105,
+                    8014,
+                    5008,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8100,
+                "perkSubStyle": 8000
+            }
+        },
+        {
+            "teamId": 100,
+            "spell1Id": 12,
+            "spell2Id": 4,
+            "championId": 126,
+            "profileIconId": 584,
+            "summonerName": "insert my hotdog",
+            "bot": false,
+            "summonerId": "em0lHE-pdIiGt8AfZDQX6N8C5xXXSzNs_Arehr2XExfCvZU",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8230,
+                    8226,
+                    8233,
+                    8237,
+                    8345,
+                    8352,
+                    5008,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8200,
+                "perkSubStyle": 8300
+            }
+        },
+        {
+            "teamId": 100,
+            "spell1Id": 4,
+            "spell2Id": 3,
+            "championId": 555,
+            "profileIconId": 7,
+            "summonerName": "Doctor Who MD",
+            "bot": false,
+            "summonerId": "Yv3UfzChJ_DA6WHGWEToeVblYKT3m-MUSVDlZLMwhZuTDCU",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8439,
+                    8446,
+                    8473,
+                    8242,
+                    8143,
+                    8106,
+                    5007,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8400,
+                "perkSubStyle": 8100
+            }
+        },
+        {
+            "teamId": 200,
+            "spell1Id": 4,
+            "spell2Id": 7,
+            "championId": 202,
+            "profileIconId": 3478,
+            "summonerName": "Olinava",
+            "bot": false,
+            "summonerId": "DeK89rYD2fZl7Epq4jizx6AW3KUZIIZpmg8CbBxpJ-kDCC4",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8021,
+                    8009,
+                    9103,
+                    8014,
+                    8275,
+                    8236,
+                    5008,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8000,
+                "perkSubStyle": 8200
+            }
+        },
+        {
+            "teamId": 200,
+            "spell1Id": 4,
+            "spell2Id": 21,
+            "championId": 99,
+            "profileIconId": 4573,
+            "summonerName": "Lady Spark",
+            "bot": false,
+            "summonerId": "zHK6JHkAMoNgzcofkVQCG4kw8U3Dah2C2985WYHh5hKV9Yek",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8128,
+                    8126,
+                    8138,
+                    8135,
+                    8313,
+                    8345,
+                    5005,
+                    5002,
+                    5002
+                ],
+                "perkStyle": 8100,
+                "perkSubStyle": 8300
+            }
+        },
+        {
+            "teamId": 200,
+            "spell1Id": 4,
+            "spell2Id": 11,
+            "championId": 20,
+            "profileIconId": 19,
+            "summonerName": "ReyShepherd",
+            "bot": false,
+            "summonerId": "iPaOm-DBIebTk9p6UhGo3kuxlql817vPHSu8KCWcJhRqpow",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8439,
+                    8463,
+                    8429,
+                    8453,
+                    8234,
+                    8232,
+                    5005,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8400,
+                "perkSubStyle": 8200
+            }
+        },
+        {
+            "teamId": 200,
+            "spell1Id": 4,
+            "spell2Id": 21,
+            "championId": 235,
+            "profileIconId": 4568,
+            "summonerName": "See summer",
+            "bot": false,
+            "summonerId": "Gc8biIInKnUiXDbVPrXPz47jW6U5aIzEpL6stVzdxK_hinE",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8437,
+                    8446,
+                    8444,
+                    8451,
+                    8226,
+                    8210,
+                    5005,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8400,
+                "perkSubStyle": 8200
+            }
+        },
+        {
+            "teamId": 200,
+            "spell1Id": 12,
+            "spell2Id": 4,
+            "championId": 9,
+            "profileIconId": 711,
+            "summonerName": "epelito",
+            "bot": false,
+            "summonerId": "fzaEKp9JB0y0j2K3_LHbwW1RxqR3tU4Qp1ZLNeIPz2xOJfE",
+            "gameCustomizationObjects": [],
+            "perks": {
+                "perkIds": [
+                    8439,
+                    8446,
+                    8473,
+                    8453,
+                    8226,
+                    8210,
+                    5008,
+                    5008,
+                    5002
+                ],
+                "perkStyle": 8400,
+                "perkSubStyle": 8200
+            }
+        }
+    ],
+    "observers": {
+        "encryptionKey": "9RH3imOoSx4U1XEPaQ+f8SZjeLPqEEM7"
+    },
+    "platformId": "NA1",
+    "bannedChampions": [
+        {
+            "championId": 266,
+            "teamId": 100,
+            "pickTurn": 1
+        },
+        {
+            "championId": 102,
+            "teamId": 100,
+            "pickTurn": 2
+        },
+        {
+            "championId": 19,
+            "teamId": 100,
+            "pickTurn": 3
+        },
+        {
+            "championId": 350,
+            "teamId": 100,
+            "pickTurn": 4
+        },
+        {
+            "championId": 105,
+            "teamId": 100,
+            "pickTurn": 5
+        },
+        {
+            "championId": 523,
+            "teamId": 200,
+            "pickTurn": 6
+        },
+        {
+            "championId": 122,
+            "teamId": 200,
+            "pickTurn": 7
+        },
+        {
+            "championId": 11,
+            "teamId": 200,
+            "pickTurn": 8
+        },
+        {
+            "championId": 157,
+            "teamId": 200,
+            "pickTurn": 9
+        },
+        {
+            "championId": 350,
+            "teamId": 200,
+            "pickTurn": 10
+        }
+    ],
+    "gameStartTime": 1592767258049,
+    "gameLength": 1260
+  }
+}
