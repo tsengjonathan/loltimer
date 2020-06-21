@@ -19,8 +19,8 @@ function App() {
             <Champion index={3} />
             <Champion index={4} />
           </div>
-          </div>
-        </main>
+        </div>
+      </main>
     </APIContextProvider>
   );
 }

@@ -19,6 +19,7 @@ function APIContextProvider({ children }) {
   const [spells, setSpells] = useState({});
   const [summonerId, setSummonerId] = useState('');
   const [players, setPlayers] = useState([]);
+  const [inputError, setInputError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +49,12 @@ function APIContextProvider({ children }) {
   useEffect(() => {
     if (!_.isEmpty(summonerId)) {
       fetchLiveGame(summonerId).then(res => {
-        const { participants } = res;
+        const { participants, status } = res;
+        if (_.get(status, 'status_code')) {
+          setInputError(_.get(status, 'message'));
+          return [];
+        }
+        setInputError(null);
         const friendlyTeamId = participants.find(participant => participant.summonerId === summonerId).teamId;
         return participants.filter(participant => participant.teamId !== friendlyTeamId);
       }).then(participants => setPlayers(participants));
@@ -57,7 +63,7 @@ function APIContextProvider({ children }) {
 
   return (
     <APIContext.Provider value={{
-      version, champions, spells, setSummonerId, players
+      version, champions, spells, setSummonerId, players, inputError
     }}>
       {children}
     </APIContext.Provider>

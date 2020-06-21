@@ -5,7 +5,7 @@ import { APIContext } from '../../contexts/APIContext';
 import { fetchSummonerInfo } from '../../api/game';
 
 export default function SummonerDetail() {
-  const { setSummonerId } = useContext(APIContext);
+  const { setSummonerId, inputError } = useContext(APIContext);
   const [summonerName, setSummonerName] = useState('');
   const [isSearched, setIsSearched] = useState(false);
   const [summonerDetail, setSummonerDetail] = useState({});
@@ -33,7 +33,7 @@ export default function SummonerDetail() {
       <div className="control">
         <button className="button is-small" onClick={searchSummoner}>
           Search
-      </button>
+        </button>
       </div>
     </div>
   );
@@ -63,9 +63,14 @@ export default function SummonerDetail() {
           </div>
         </div>
         <div className="level-right">
-          { searchBox }
+          {searchBox}
         </div>
       </div>
+      {
+        inputError ? 
+          <p className="help is-danger">{inputError}</p>
+        : null
+      }
     </div>
   );
 }
