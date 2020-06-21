@@ -1,4 +1,4 @@
-const url = 'https://ncblbnp19k.execute-api.us-east-1.amazonaws.com/prod';
+const url = process.env.REACT_APP_PROXY_URL;
 
 function fetchSummonerInfo(name) {
   return fetch(`${url}/summoner?summonerName=${name}`)
