@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/loltimer/precache-manifest.5de0050905eb53079f8be4c3b9ef83b7.js"
+  "/loltimer/precache-manifest.1538a04a8c81a5de298154b2dea9cde6.js"
 );
 
 self.addEventListener('message', (event) => {
