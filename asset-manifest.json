@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/loltimer/static/css/main.2e88cfc4.chunk.css",
-    "main.js": "/loltimer/static/js/main.f72082fb.chunk.js",
-    "main.js.map": "/loltimer/static/js/main.f72082fb.chunk.js.map",
+    "main.js": "/loltimer/static/js/main.9cc86ae0.chunk.js",
+    "main.js.map": "/loltimer/static/js/main.9cc86ae0.chunk.js.map",
     "runtime-main.js": "/loltimer/static/js/runtime-main.c5c00ebc.js",
     "runtime-main.js.map": "/loltimer/static/js/runtime-main.c5c00ebc.js.map",
-    "static/js/2.4a5d0f33.chunk.js": "/loltimer/static/js/2.4a5d0f33.chunk.js",
-    "static/js/2.4a5d0f33.chunk.js.map": "/loltimer/static/js/2.4a5d0f33.chunk.js.map",
+    "static/js/2.69c898fd.chunk.js": "/loltimer/static/js/2.69c898fd.chunk.js",
+    "static/js/2.69c898fd.chunk.js.map": "/loltimer/static/js/2.69c898fd.chunk.js.map",
     "index.html": "/loltimer/index.html",
-    "precache-manifest.ea8a371a09011569d61c279cb467b8a3.js": "/loltimer/precache-manifest.ea8a371a09011569d61c279cb467b8a3.js",
+    "precache-manifest.09637505c5e6a725ecf0c0c4f4aa9bad.js": "/loltimer/precache-manifest.09637505c5e6a725ecf0c0c4f4aa9bad.js",
     "service-worker.js": "/loltimer/service-worker.js",
     "static/css/main.2e88cfc4.chunk.css.map": "/loltimer/static/css/main.2e88cfc4.chunk.css.map",
-    "static/js/2.4a5d0f33.chunk.js.LICENSE.txt": "/loltimer/static/js/2.4a5d0f33.chunk.js.LICENSE.txt"
+    "static/js/2.69c898fd.chunk.js.LICENSE.txt": "/loltimer/static/js/2.69c898fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c5c00ebc.js",
-    "static/js/2.4a5d0f33.chunk.js",
+    "static/js/2.69c898fd.chunk.js",
     "static/css/main.2e88cfc4.chunk.css",
-    "static/js/main.f72082fb.chunk.js"
+    "static/js/main.9cc86ae0.chunk.js"
   ]
 }
