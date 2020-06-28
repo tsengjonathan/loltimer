@@ -59,7 +59,7 @@ export default function SpellTimer({ id, index }) {
         <progress className="progress" max={cooldown} value={timer} />
       </div>
       <span class="tag ml-2">
-        {timer}
+        {_.round(timer)}
       </span>
       <button className="button is-small ml-2" onClick={handleClick}>
         {isActivated ? "Stop" : "Start"}
