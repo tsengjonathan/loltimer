@@ -3,13 +3,15 @@ import _ from 'lodash';
 
 import { APIContext } from '../../contexts/APIContext';
 
-export default function SpellTimer({ id }) {
-  const { version, spells } = useContext(APIContext);
+import { isTeleport, calculateTeleportCooldown } from '../../util/teleport';
+
+export default function SpellTimer({ id, index }) {
+  const { version, spells, getLevel } = useContext(APIContext);
   const [isActivated, setActivated] = useState(false);
   const [timer, setTimer] = useState(-1);
 
   const spell = spells[id];
-  const cooldown = _.get(spell, ['cooldown', 0]);
+  const cooldown = isTeleport(spell) ? calculateTeleportCooldown(getLevel(index)) : _.get(spell, ['cooldown', 0]);
 
   const urlPrefix = `https://ddragon.leagueoflegends.com/cdn/${version}/img`;
   

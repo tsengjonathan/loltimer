@@ -20,6 +20,7 @@ function APIContextProvider({ children }) {
   const [summonerId, setSummonerId] = useState('');
   const [players, setPlayers] = useState([]);
   const [inputError, setInputError] = useState(null);
+  const [levels, setLevels] = useState([1, 1, 1, 1, 1]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,9 +62,16 @@ function APIContextProvider({ children }) {
     }
   }, [summonerId]);
 
+  const getLevel = (index) => levels[index];
+  const setLevel = (index, level) => {
+    const newLevels = _.clone(levels);
+    newLevels[index] = level;
+    setLevels(newLevels);
+  }
+
   return (
     <APIContext.Provider value={{
-      version, champions, spells, setSummonerId, players, inputError
+      version, champions, spells, setSummonerId, players, inputError, getLevel, setLevel
     }}>
       {children}
     </APIContext.Provider>

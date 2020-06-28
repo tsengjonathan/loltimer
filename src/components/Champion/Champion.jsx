@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { APIContext } from '../../contexts/APIContext';
 
 import SpellTimer from '../SpellTimer';
-
+import Level from '../Level';
 
 export default function Champion({ index }) {
   const { players, champions, version } = useContext(APIContext);
@@ -34,9 +34,12 @@ export default function Champion({ index }) {
             <h2 className="subtitle is-6">{summonerInfo.summonerName}</h2>
           </div>
         </div>
+        <div className="level-right">
+          <Level index={index} />
+        </div>
       </div>
-      <SpellTimer id={spell1Id} />
-      <SpellTimer id={spell2Id} />
+      <SpellTimer id={spell1Id} index={index} />
+      <SpellTimer id={spell2Id} index={index} />
     </div>
   )
 }
